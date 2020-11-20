@@ -1,0 +1,48 @@
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.exe.config
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.exe
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.pdb
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.xml
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.xml
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csprojAssemblyReference.cache
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.Desktop.resources
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Form1.resources
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.login.resources
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Properties.Resources.resources
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csproj.GenerateResource.cache
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csproj.CopyComplete
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.exe
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.pdb
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.presentation.dll
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.xml
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.presentation.xml
+C:\Users\louis\source\repos\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.agregar.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.exe.config
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.exe
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AsistanceSystem.pdb
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.presentation.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.presentation.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csprojAssemblyReference.cache
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.agregar.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.Desktop.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Form1.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.login.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Properties.Resources.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csproj.GenerateResource.cache
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csproj.CopyComplete
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.exe
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.pdb
