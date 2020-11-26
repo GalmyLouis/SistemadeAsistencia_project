@@ -22,5 +22,16 @@ namespace AsistanceSystem.forms
             generarQr codigoQr = new generarQr();
             codigoQr.Show();
         }
+
+        private void Desktop_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSaveEmp_Click(object sender, EventArgs e)
+        {
+            agregar saveEmp = new agregar();
+            saveEmp.ShowDialog();
+        }
     }
 }

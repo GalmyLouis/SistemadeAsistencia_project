@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AsistanceSystem.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -17,39 +18,42 @@ namespace AsistanceSystem.forms
         Desktop desktop = new Desktop();
         public login()
         {
-            try
-            {
-                string conex = ConfigurationManager.ConnectionStrings["conex"].ConnectionString;
-                using (SqlConnection connection=new SqlConnection(conex))
-                {
-                    connection.Open();
-                    using (SqlCommand cmd = new SqlCommand(" Select [Clave_usuario],[access] From administrador " 
-                        + "Where [Clave_usuarios]="+ txtUsers+"And [access]="+ txtAccess+"", connection))
-                    {
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            MessageBox.Show("logged");
-                        }
-                        else
-                        {
-                            MessageBox.Show("errorr, user or password not verified ");
-                        }
-                    }
-                }
-
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            InitializeComponent();
         }
 
         
 
         private void txtAccept_Click(object sender, EventArgs e)
         {
-          
-            desktop.Show();
+            //string spassword = Encrypt.GetSHA256( txtAccess.Text);
+            string spassword = txtAccess.Text;
+            string clave = txtUsers.Text;
+            /*using (Models.AsistenciaEntities3 db =new Models.AsistenciaEntities3())
+            {
+                var lst = db.tblAdministrador.FirstOrDefault(d => d.Usuario == clave);
+                          
+                         
+                if (lst!=null)
+                {
+                    if (lst.Access == spassword)
+                    {
+                        MessageBox.Show("logged");
+                        this.Hide();
+                        desktop.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong password");
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no existe ");
+                }
+            }
+
+           */
            
            
         }

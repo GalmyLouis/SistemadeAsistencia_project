@@ -44,9 +44,9 @@
             // 
             // txtAccept
             // 
-            this.txtAccept.Location = new System.Drawing.Point(131, 198);
+            this.txtAccept.Location = new System.Drawing.Point(131, 197);
             this.txtAccept.Name = "txtAccept";
-            this.txtAccept.Size = new System.Drawing.Size(75, 31);
+            this.txtAccept.Size = new System.Drawing.Size(79, 52);
             this.txtAccept.TabIndex = 0;
             this.txtAccept.Text = "Acceptar";
             this.txtAccept.UseVisualStyleBackColor = true;
@@ -54,23 +54,23 @@
             // 
             // txtUsers
             // 
-            this.txtUsers.Location = new System.Drawing.Point(143, 92);
+            this.txtUsers.Location = new System.Drawing.Point(134, 92);
             this.txtUsers.Name = "txtUsers";
-            this.txtUsers.Size = new System.Drawing.Size(192, 20);
+            this.txtUsers.Size = new System.Drawing.Size(203, 20);
             this.txtUsers.TabIndex = 1;
             // 
             // txtAccess
             // 
-            this.txtAccess.Location = new System.Drawing.Point(143, 145);
+            this.txtAccess.Location = new System.Drawing.Point(131, 132);
             this.txtAccess.Name = "txtAccess";
-            this.txtAccess.Size = new System.Drawing.Size(192, 20);
+            this.txtAccess.Size = new System.Drawing.Size(204, 20);
             this.txtAccess.TabIndex = 2;
             // 
             // txtCancel
             // 
-            this.txtCancel.Location = new System.Drawing.Point(235, 198);
+            this.txtCancel.Location = new System.Drawing.Point(262, 197);
             this.txtCancel.Name = "txtCancel";
-            this.txtCancel.Size = new System.Drawing.Size(75, 31);
+            this.txtCancel.Size = new System.Drawing.Size(73, 52);
             this.txtCancel.TabIndex = 5;
             this.txtCancel.Text = "Cancelar";
             this.txtCancel.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AsistanceSystem.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(110, 143);
+            this.pictureBox2.Location = new System.Drawing.Point(101, 132);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,7 +120,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AsistanceSystem.Properties.Resources.profile_user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(110, 90);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 92);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,6 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(462, 324);
             this.Controls.Add(this.label3);
@@ -143,8 +144,6 @@
             this.Controls.Add(this.txtUsers);
             this.Controls.Add(this.txtAccept);
             this.Name = "login";
-            this.Opacity = 0.5D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

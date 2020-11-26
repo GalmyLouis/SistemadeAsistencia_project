@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsistenciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="administrador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Clave_usuario" Type="Int32" />
+    <Property Name="access" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AsistenciaEmp">
+    <Key>
+      <PropertyRef Name="id_asistencia" />
+    </Key>
+    <Property Name="id_asistencia" Type="Int32" Nullable="false" />
+    <Property Name="nombreC_empleado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hora_entrada" Type="DateTime" Precision="3" />
+    <Property Name="hora_salida" Type="DateTime" Precision="3" />
+    <Property Name="id_empleado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="empleados" Relationship="Self.FK__Asistenci__id_em__15502E78" FromRole="AsistenciaEmp" ToRole="empleados" />
+  </EntityType>
+  <EntityType Name="codigo_QR">
+    <Key>
+      <PropertyRef Name="id_codigo_QR" />
+    </Key>
+    <Property Name="id_codigo_QR" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaCreacion" Type="DateTime" Precision="0" />
+    <Property Name="qr_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="empleados" Relationship="Self.FK__empleados__id_co__1273C1CD" FromRole="codigo_QR" ToRole="empleados" />
+  </EntityType>
+  <EntityType Name="empleados">
+    <Key>
+      <PropertyRef Name="id_empleado" />
+    </Key>
+    <Property Name="id_empleado" Type="Int32" Nullable="false" />
+    <Property Name="id_codigo_QR" Type="Int32" Nullable="false" />
+    <Property Name="cedula" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AsistenciaEmp" Relationship="Self.FK__Asistenci__id_em__15502E78" FromRole="empleados" ToRole="AsistenciaEmp" />
+    <NavigationProperty Name="codigo_QR" Relationship="Self.FK__empleados__id_co__1273C1CD" FromRole="empleados" ToRole="codigo_QR" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Asistenci__id_em__15502E78">
+    <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
+    <End Role="AsistenciaEmp" Type="Self.AsistenciaEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleados">
+        <PropertyRef Name="id_empleado" />
+      </Principal>
+      <Dependent Role="AsistenciaEmp">
+        <PropertyRef Name="id_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleados__id_co__1273C1CD">
+    <End Role="codigo_QR" Type="Self.codigo_QR" Multiplicity="1" />
+    <End Role="empleados" Type="Self.empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="codigo_QR">
+        <PropertyRef Name="id_codigo_QR" />
+      </Principal>
+      <Dependent Role="empleados">
+        <PropertyRef Name="id_codigo_QR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AsistenciaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="administrador" EntityType="Self.administrador" />
+    <EntitySet Name="AsistenciaEmp" EntityType="Self.AsistenciaEmp" />
+    <EntitySet Name="codigo_QR" EntityType="Self.codigo_QR" />
+    <EntitySet Name="empleados" EntityType="Self.empleados" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK__Asistenci__id_em__15502E78" Association="Self.FK__Asistenci__id_em__15502E78">
+      <End Role="empleados" EntitySet="empleados" />
+      <End Role="AsistenciaEmp" EntitySet="AsistenciaEmp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleados__id_co__1273C1CD" Association="Self.FK__empleados__id_co__1273C1CD">
+      <End Role="codigo_QR" EntitySet="codigo_QR" />
+      <End Role="empleados" EntitySet="empleados" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

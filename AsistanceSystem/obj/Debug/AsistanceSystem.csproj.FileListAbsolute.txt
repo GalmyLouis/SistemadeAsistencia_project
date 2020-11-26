@@ -46,3 +46,10 @@ C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Softwar
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csproj.CopyComplete
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.exe
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.pdb
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.generarQr.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\EntityFramework.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\EntityFramework.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.NuevoEmpleado.resources

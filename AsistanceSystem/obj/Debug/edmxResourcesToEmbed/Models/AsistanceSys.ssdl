@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AsistenciaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="administrador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Clave_usuario" Type="int" />
+    <Property Name="access" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AsistenciaEmp">
+    <Key>
+      <PropertyRef Name="id_asistencia" />
+    </Key>
+    <Property Name="id_asistencia" Type="int" Nullable="false" />
+    <Property Name="nombreC_empleado" Type="varchar" MaxLength="50" />
+    <Property Name="hora_entrada" Type="datetime" />
+    <Property Name="hora_salida" Type="datetime" />
+    <Property Name="id_empleado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="codigo_QR">
+    <Key>
+      <PropertyRef Name="id_codigo_QR" />
+    </Key>
+    <Property Name="id_codigo_QR" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="fechaCreacion" Type="date" />
+    <Property Name="qr_image" Type="image" />
+  </EntityType>
+  <EntityType Name="empleados">
+    <Key>
+      <PropertyRef Name="id_empleado" />
+    </Key>
+    <Property Name="id_empleado" Type="int" Nullable="false" />
+    <Property Name="id_codigo_QR" Type="int" Nullable="false" />
+    <Property Name="cedula" Type="varchar" MaxLength="11" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Asistenci__id_em__15502E78">
+    <End Role="empleados" Type="Self.empleados" Multiplicity="1" />
+    <End Role="AsistenciaEmp" Type="Self.AsistenciaEmp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleados">
+        <PropertyRef Name="id_empleado" />
+      </Principal>
+      <Dependent Role="AsistenciaEmp">
+        <PropertyRef Name="id_empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleados__id_co__1273C1CD">
+    <End Role="codigo_QR" Type="Self.codigo_QR" Multiplicity="1" />
+    <End Role="empleados" Type="Self.empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="codigo_QR">
+        <PropertyRef Name="id_codigo_QR" />
+      </Principal>
+      <Dependent Role="empleados">
+        <PropertyRef Name="id_codigo_QR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AsistenciaModelStoreContainer">
+    <EntitySet Name="administrador" EntityType="Self.administrador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AsistenciaEmp" EntityType="Self.AsistenciaEmp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="codigo_QR" EntityType="Self.codigo_QR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="empleados" EntityType="Self.empleados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Asistenci__id_em__15502E78" Association="Self.FK__Asistenci__id_em__15502E78">
+      <End Role="empleados" EntitySet="empleados" />
+      <End Role="AsistenciaEmp" EntitySet="AsistenciaEmp" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleados__id_co__1273C1CD" Association="Self.FK__empleados__id_co__1273C1CD">
+      <End Role="codigo_QR" EntitySet="codigo_QR" />
+      <End Role="empleados" EntitySet="empleados" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

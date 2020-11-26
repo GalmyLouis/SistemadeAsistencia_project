@@ -12,14 +12,18 @@ using System.Windows.Forms;
 using ZXing;
 using ZXing.Multi;
 using AsistanceSystem.forms;
+using System.Runtime.Remoting.Contexts;
+using AsistanceSystem.Class;
 
 namespace AsistanceSystem
 {
     public partial class Form1 : Form
     {
+        private  EmpleadoFill _EmpleadoFill;
         public Form1()
         {
             InitializeComponent();
+            _EmpleadoFill = new EmpleadoFill();
         }
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
@@ -66,12 +70,59 @@ namespace AsistanceSystem
                 if(result!=null)
                 {
                     txtCapture.Text = result.ToString();
+                    /*using(Models.AsistenciaEntities3 db= new Models.AsistenciaEntities3())
+                    {
+                        tblEmpleados emp = new tblEmpleados();
+                        tblAsistencia As = new tblAsistencia();
+                        DateTime hora = DateTime.Now;
+                        if (txtCapture.Text==emp.CodigoEmpleado)
+                        {
+                            As.CodigoEmpleado = txtCapture.Text;
+                            As.HoraDeEntrada = hora;
+
+                            db.tblAsistencia.Add(As);
+                            db.SaveChanges();
+                            MessageBox.Show("Asistencia Guardado");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tu no eres registrado como empleado de la compania");
+                        }
+                       
+
+                    }*/
+                    guardarAsistencia();
                     timer1.Stop();
                     if (captureDevice.IsRunning)
                         captureDevice.Stop();
 
+
                 }
             }
+
+        }
+
+        public void guardarAsistencia()
+        {
+            try
+            {
+                ClassAsistencia classAsistencia = new ClassAsistencia();
+                DateTime hora = DateTime.Now;
+                if (txtCapture.Text == classAsistencia.CodigoEmpleado)
+                {
+                    classAsistencia.CodigoEmpleado = txtCapture.Text;
+                    classAsistencia.HoraDeEntrada = hora;
+
+                }
+
+                _EmpleadoFill.SaveAsistent(classAsistencia);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error", ex.ToString());
+            }
+           
 
         }
 

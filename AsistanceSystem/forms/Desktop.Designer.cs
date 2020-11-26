@@ -30,9 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveEmp = new System.Windows.Forms.Button();
-            this.btnEditEmp = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnDeleteEmp = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,15 +58,7 @@
             this.btnSaveEmp.TabIndex = 8;
             this.btnSaveEmp.Text = "Agregar empleado";
             this.btnSaveEmp.UseVisualStyleBackColor = true;
-            // 
-            // btnEditEmp
-            // 
-            this.btnEditEmp.Location = new System.Drawing.Point(408, 90);
-            this.btnEditEmp.Name = "btnEditEmp";
-            this.btnEditEmp.Size = new System.Drawing.Size(75, 61);
-            this.btnEditEmp.TabIndex = 9;
-            this.btnEditEmp.Text = "Modificar empleado";
-            this.btnEditEmp.UseVisualStyleBackColor = true;
+            this.btnSaveEmp.Click += new System.EventHandler(this.btnSaveEmp_Click);
             // 
             // btnReport
             // 
@@ -78,15 +68,6 @@
             this.btnReport.TabIndex = 10;
             this.btnReport.Text = "Generar reporte";
             this.btnReport.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteEmp
-            // 
-            this.btnDeleteEmp.Location = new System.Drawing.Point(192, 201);
-            this.btnDeleteEmp.Name = "btnDeleteEmp";
-            this.btnDeleteEmp.Size = new System.Drawing.Size(75, 61);
-            this.btnDeleteEmp.TabIndex = 11;
-            this.btnDeleteEmp.Text = "Eliminar empleado";
-            this.btnDeleteEmp.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -122,17 +103,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(680, 327);
+            this.ClientSize = new System.Drawing.Size(701, 348);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnDeleteEmp);
             this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.btnSaveEmp);
             this.Controls.Add(this.label1);
             this.Name = "Desktop";
             this.Text = "Desktop";
+            this.Load += new System.EventHandler(this.Desktop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -143,9 +123,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveEmp;
-        private System.Windows.Forms.Button btnEditEmp;
         private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnDeleteEmp;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;

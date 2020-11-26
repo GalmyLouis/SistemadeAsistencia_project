@@ -19,15 +19,20 @@ namespace AsistanceSystem.forms
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            Zen.Barcode.CodeQrBarcodeDraw codigoQr = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            imgQr.Image = codigoQr.Draw(txtGenerar.Text, 40);
+            //Zen.Barcode.CodeQrBarcodeDraw codigoQr = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+           // imgQr.Image = codigoQr.Draw(txtGenerar.Text, 40);
         }
 
         private void btnSaveQr_Click(object sender, EventArgs e)
         {
-            SaveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+           /* SaveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             SaveFileDialog.FileName = "";
-            SaveFileDialog.Filter = "png|*.png";
+            SaveFileDialog.Filter = "png|*.png";*/
+
+        }
+
+        private void generarQr_Load(object sender, EventArgs e)
+        {
 
         }
     }

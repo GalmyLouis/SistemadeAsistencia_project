@@ -113,6 +113,7 @@
             this.Controls.Add(this.label1);
             this.Name = "generarQr";
             this.Text = "generarQr";
+            this.Load += new System.EventHandler(this.generarQr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgQr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
