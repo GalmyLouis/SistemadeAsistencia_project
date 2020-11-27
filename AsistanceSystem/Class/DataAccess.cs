@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AsistanceSystem.forms;
+using System;
+
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,8 +13,44 @@ namespace AsistanceSystem.Class
 {
     public class DataAccess
     {
+
         private SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;User ID=sa;Initial Catalog=Asistencia;Data Source=DESKTOP-D9VQ79U");
-        
+        public void login(ClassLogin classLogin)
+        {
+            try
+            {
+                conn.Open();
+                string Query = @"Select Usuario , Access from tblAdministrador where 
+                                Usuario=@Usuario AND Access=@Access";
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                SqlParameter Usuario= new SqlParameter("@Usuario", classLogin.Usuario);
+                SqlParameter Access = new SqlParameter("@Access", classLogin.contrasena);
+
+                cmd.Parameters.Add(Usuario);
+                cmd.Parameters.Add(Access);
+                SqlDataReader reader = cmd.ExecuteReader();
+                Desktop desktop = new Desktop();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Login Existoso");
+                    desktop.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña incorrecto");
+                }
+            }
+
+            catch (Exception ex )
+            {
+                MessageBox.Show("Error", ex.ToString());
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         public void InsertarEmpleados(ClassEmpleados classEmpleados)
         {
             try
@@ -48,6 +86,7 @@ namespace AsistanceSystem.Class
             catch (Exception ex)
             {
 
+            
                 MessageBox.Show(ex.ToString());
                 
             }
@@ -85,6 +124,7 @@ namespace AsistanceSystem.Class
                 MessageBox.Show(ex.ToString());
 
             }
+
             finally
             {
                 conn.Close();
@@ -210,6 +250,8 @@ namespace AsistanceSystem.Class
                 conn.Close();
             }
         }
+
+      
 
     }
 }

@@ -39,6 +39,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbScanner = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbScanner)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +137,17 @@
             this.pbScanner.TabIndex = 2;
             this.pbScanner.TabStop = false;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Tomato;
+            this.btnSalir.Location = new System.Drawing.Point(642, 341);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +156,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(716, 368);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -177,6 +190,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

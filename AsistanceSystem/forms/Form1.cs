@@ -19,11 +19,13 @@ namespace AsistanceSystem
 {
     public partial class Form1 : Form
     {
+        private DataAccess _dataAccess;
         private  EmpleadoFill _EmpleadoFill;
         public Form1()
         {
             InitializeComponent();
             _EmpleadoFill = new EmpleadoFill();
+            _dataAccess=new DataAccess();
         }
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
@@ -58,7 +60,14 @@ namespace AsistanceSystem
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (captureDevice.IsRunning)
+            {
                 captureDevice.Stop();
+            }
+            else
+            {
+                MessageBox.Show("Adios");
+            }
+                
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -83,21 +92,33 @@ namespace AsistanceSystem
 
         }
 
+
+
         public void guardarAsistencia()
         {
             try
             {
                 ClassEmpleados classEmpleados = new ClassEmpleados();
                 ClassAsistencia classAsistencia = new ClassAsistencia();
-                DateTime hora = Convert.ToDateTime("2008-12-24 09:40:00");
-                if (txtCapture.Text == classEmpleados.CodigoEmpleado)
+               var datos = _dataAccess.mostrarEmpleado();
+                foreach (var item in datos)
                 {
-                    classAsistencia.CodigoEmpleado = txtCapture.Text;
-                    classAsistencia.HoraDeEntrada = hora;
-
+                    var id = item.CodigoEmpleado;
+                    if (id == txtCapture.Text)
+                    {
+                        DateTime hora = DateTime.Now;
+                        classAsistencia.CodigoEmpleado = txtCapture.Text;
+                        classAsistencia.HoraDeEntrada = hora;
+                        _EmpleadoFill.SaveAsistent(classAsistencia);
+                    }
                 }
+                
+                //if ("E-101" != classEmpleados.CodigoEmpleado)
+                //{
+                //    MessageBox.Show("no son iguales");
 
-                _EmpleadoFill.SaveAsistent(classAsistencia);
+                //}
+
             }
             catch(Exception ex)
             {
@@ -111,6 +132,11 @@ namespace AsistanceSystem
         {
             login formLogin= new login();
             formLogin.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

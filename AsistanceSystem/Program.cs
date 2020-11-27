@@ -17,7 +17,7 @@ namespace AsistanceSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new agregar());
+            Application.Run(new Form1());
         }
     }
 }

@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="Class\ClassAsistencia.cs" />
     <Compile Include="Class\ClassEmpleados.cs" />
+    <Compile Include="Class\ClassLogin.cs" />
     <Compile Include="Class\DataAccess.cs" />
     <Compile Include="Class\EmpleadoFill.cs" />
     <Compile Include="Class\Encrypt.cs" />
