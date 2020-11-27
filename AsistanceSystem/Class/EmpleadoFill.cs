@@ -21,10 +21,10 @@ namespace AsistanceSystem.Class
             {
                 _dataAccess.InsertarEmpleados(classEmpleados);
             }
-            // else
-            //  {
-            //_dataAccess.modificarEmpleados
-            //}
+            else
+            {
+                _dataAccess.updateEmpleado(classEmpleados);
+            }
             return classEmpleados;
         }
         public List<ClassEmpleados> GetEmpleados()
@@ -40,6 +40,10 @@ namespace AsistanceSystem.Class
              _dataAccess.GuardarAsistencia(classAsistencia);
 
             return classAsistencia;
+        }
+        public void deleteEmpleados(int id)
+        {
+            _dataAccess.deleteEmpleado(id);
         }
     }
 }

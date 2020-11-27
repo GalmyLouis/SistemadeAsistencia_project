@@ -70,28 +70,8 @@ namespace AsistanceSystem
                 if(result!=null)
                 {
                     txtCapture.Text = result.ToString();
-                    /*using(Models.AsistenciaEntities3 db= new Models.AsistenciaEntities3())
-                    {
-                        tblEmpleados emp = new tblEmpleados();
-                        tblAsistencia As = new tblAsistencia();
-                        DateTime hora = DateTime.Now;
-                        if (txtCapture.Text==emp.CodigoEmpleado)
-                        {
-                            As.CodigoEmpleado = txtCapture.Text;
-                            As.HoraDeEntrada = hora;
-
-                            db.tblAsistencia.Add(As);
-                            db.SaveChanges();
-                            MessageBox.Show("Asistencia Guardado");
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tu no eres registrado como empleado de la compania");
-                        }
-                       
-
-                    }*/
+                   
+                    MessageBox.Show(txtCapture.Text);
                     guardarAsistencia();
                     timer1.Stop();
                     if (captureDevice.IsRunning)
@@ -107,9 +87,10 @@ namespace AsistanceSystem
         {
             try
             {
+                ClassEmpleados classEmpleados = new ClassEmpleados();
                 ClassAsistencia classAsistencia = new ClassAsistencia();
-                DateTime hora = DateTime.Now;
-                if (txtCapture.Text == classAsistencia.CodigoEmpleado)
+                DateTime hora = Convert.ToDateTime("2008-12-24 09:40:00");
+                if (txtCapture.Text == classEmpleados.CodigoEmpleado)
                 {
                     classAsistencia.CodigoEmpleado = txtCapture.Text;
                     classAsistencia.HoraDeEntrada = hora;

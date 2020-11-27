@@ -36,6 +36,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.classEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoEmpleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,8 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classEmpleadosBindingSource)).BeginInit();
@@ -99,15 +101,18 @@
             this.direccionDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.cargoDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn});
+            this.telefonoDataGridViewTextBoxColumn,
+            this.Editar,
+            this.Eliminar});
             this.dgEmpleado.DataSource = this.classEmpleadosBindingSource;
-            this.dgEmpleado.Location = new System.Drawing.Point(12, 70);
+            this.dgEmpleado.Location = new System.Drawing.Point(12, 46);
             this.dgEmpleado.MultiSelect = false;
             this.dgEmpleado.Name = "dgEmpleado";
             this.dgEmpleado.ReadOnly = true;
             this.dgEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgEmpleado.Size = new System.Drawing.Size(717, 280);
             this.dgEmpleado.TabIndex = 26;
+            this.dgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgEmpleado_CellContentClick);
             // 
             // btnEliminar
             // 
@@ -132,6 +137,10 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // classEmpleadosBindingSource
+            // 
+            this.classEmpleadosBindingSource.DataSource = typeof(AsistanceSystem.Class.ClassEmpleados);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -196,9 +205,22 @@
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // classEmpleadosBindingSource
+            // Editar
             // 
-            this.classEmpleadosBindingSource.DataSource = typeof(AsistanceSystem.Class.ClassEmpleados);
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForLinkValue = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.DataPropertyName = "id";
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseColumnTextForLinkValue = true;
             // 
             // agregar
             // 
@@ -232,6 +254,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.BindingSource classEmpleadosBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoEmpleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
@@ -241,6 +264,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource classEmpleadosBindingSource;
+        private System.Windows.Forms.DataGridViewLinkColumn Editar;
+        private System.Windows.Forms.DataGridViewLinkColumn Eliminar;
     }
 }

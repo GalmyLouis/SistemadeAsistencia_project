@@ -25,7 +25,7 @@ namespace AsistanceSystem.forms
 
         private void agregar_Load(object sender, EventArgs e)
         {
-            CargarEmppleado();
+            CargarEmpleado();
         }
 
         
@@ -48,7 +48,7 @@ namespace AsistanceSystem.forms
 
         }
         #endregion
-        public void CargarEmppleado()
+        public void CargarEmpleado()
         {
             List<ClassEmpleados> classEmpleados = _EmpleadoFill.GetEmpleados();
             dgEmpleado.DataSource = classEmpleados;    
@@ -57,6 +57,39 @@ namespace AsistanceSystem.forms
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewLinkCell cell = (DataGridViewLinkCell)dgEmpleado.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            if (cell.Value.ToString() == "Editar")
+            {
+                NuevoEmpleado nuevoEmpleado = new NuevoEmpleado();
+                nuevoEmpleado.LoadEmpleado(new ClassEmpleados
+                {
+                    id = int.Parse(dgEmpleado.Rows[e.RowIndex].Cells[0].Value.ToString()),
+                    CodigoEmpleado = dgEmpleado.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                    Nombre = dgEmpleado.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                    Apellido = dgEmpleado.Rows[e.RowIndex].Cells[3].Value.ToString(),
+                    Cedula = dgEmpleado.Rows[e.RowIndex].Cells[4].Value.ToString(),
+                    Direccion = dgEmpleado.Rows[e.RowIndex].Cells[5].Value.ToString(),
+                    Email = dgEmpleado.Rows[e.RowIndex].Cells[6].Value.ToString(),
+                    Cargo = dgEmpleado.Rows[e.RowIndex].Cells[7].Value.ToString(),
+                    Telefono = dgEmpleado.Rows[e.RowIndex].Cells[8].Value.ToString()
+                });
+                nuevoEmpleado.ShowDialog(this);
+
+            }
+            else if (cell.Value.ToString() == "Eliminar")
+            {
+                deleteEmpleados(int.Parse(dgEmpleado.Rows[e.RowIndex].Cells[0].Value.ToString()));
+                CargarEmpleado();
+            }
+                
+        }
+        private void deleteEmpleados(int id)
+        {
+            _EmpleadoFill.deleteEmpleados(id);
         }
     }
 }

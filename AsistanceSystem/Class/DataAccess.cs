@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -61,18 +62,19 @@ namespace AsistanceSystem.Class
 
         public void GuardarAsistencia(ClassAsistencia classAsistencia)
         {
-            try{
+
+            try
+            {
                 conn.Open();
-                string Query = @"insert into tblAsistencia 
-                (CodigoEmpleado, HoraDeEntrada)values( @CodigoEmpleado, @HoraDeEntrada)";
+                string Query = @"Insert into tblAsistencia (CodigoEmpleado,HoraDeEntrada) Values(@CodigoEmpleado,@HoraDeEntrada)";
                 SqlParameter codigo = new SqlParameter("@CodigoEmpleado", classAsistencia.CodigoEmpleado);
-                SqlParameter hora = new SqlParameter("@Nombre", classAsistencia.HoraDeEntrada);
-                
+                SqlParameter hora = new SqlParameter("@HoraDeEntrada", classAsistencia.HoraDeEntrada);
+
 
                 SqlCommand cmd = new SqlCommand(Query, conn);
                 cmd.Parameters.Add(codigo);
                 cmd.Parameters.Add(hora);
-               
+
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("----------Asistencia--------- ");
@@ -128,6 +130,85 @@ namespace AsistanceSystem.Class
                 conn.Close();
             }
             return classEmpleados;
+        }
+        public void updateEmpleado(ClassEmpleados classEmpleados)
+        {
+            try
+            {
+                conn.Open();
+                string Query = @"UPDATE tblEmpleados SET 
+                                CodigoEmpleado= @CodigoEmpleado,
+                                       Nombre=@Nombre,
+                                      Apellido=@Apellido,
+                                        Cedula= @Cedula,
+                                       Direccion=@Direccion,
+                                            Email=@Email,
+                                            Cargo=@Cargo,
+                                        Telefono=@Telefono
+                                        WHERE id=@id";
+
+                SqlParameter Id= new SqlParameter("@id", classEmpleados.id);
+                SqlParameter codigo = new SqlParameter("@CodigoEmpleado", classEmpleados.CodigoEmpleado);
+                SqlParameter nombre = new SqlParameter("@Nombre", classEmpleados.Nombre);
+                SqlParameter apellido = new SqlParameter("@Apellido", classEmpleados.Apellido);
+                SqlParameter cedula = new SqlParameter("@Cedula", classEmpleados.Cedula);
+                SqlParameter direccion = new SqlParameter("@Direccion", classEmpleados.Direccion);
+                SqlParameter email = new SqlParameter("@Email", classEmpleados.Email);
+                SqlParameter cargo = new SqlParameter("@Cargo", classEmpleados.Cargo);
+                SqlParameter telefono = new SqlParameter("@Telefono", classEmpleados.Telefono);
+
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.Add(Id);
+                cmd.Parameters.Add(codigo);
+                cmd.Parameters.Add(nombre);
+                cmd.Parameters.Add(apellido);
+                cmd.Parameters.Add(cedula);
+                cmd.Parameters.Add(direccion);
+                cmd.Parameters.Add(email);
+                cmd.Parameters.Add(cargo);
+                cmd.Parameters.Add(telefono);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("----------Empleado Modificado Correctamente--------- ");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public void deleteEmpleado(int id)
+        {
+            try
+            {
+                conn.Open();
+               string Query=@"Delete from tblEmpleados where id=@id";
+
+                SqlCommand cmd = new SqlCommand(Query, conn);
+                cmd.Parameters.Add(new SqlParameter("@id",id));
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("----------Empleado Eliminado Correctamente--------- ");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
     }
