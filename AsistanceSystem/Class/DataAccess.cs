@@ -171,6 +171,37 @@ namespace AsistanceSystem.Class
             }
             return classEmpleados;
         }
+        public List<ClassEmpleados> GetCodigoEmpleado()
+        {
+            List<ClassEmpleados> classEmpleados = new List<ClassEmpleados>();
+            try
+            {
+                conn.Open();
+                string query = @"SELECT CodigoEmpleado From tblEmpleados";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    classEmpleados.Add(new ClassEmpleados
+                    {
+                        CodigoEmpleado = reader["CodigoEmpleado"].ToString(),
+                        
+                    });
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.ToString());
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return classEmpleados;
+        }
         public void updateEmpleado(ClassEmpleados classEmpleados)
         {
             try

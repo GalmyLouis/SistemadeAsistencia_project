@@ -39,5 +39,10 @@ namespace AsistanceSystem.forms
         {
 
         }
+
+        private void txtCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

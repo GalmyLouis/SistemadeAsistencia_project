@@ -59,6 +59,7 @@ namespace AsistanceSystem
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            VideoCaptureDevice captureDevice = new VideoCaptureDevice();
             if (captureDevice.IsRunning)
             {
                 captureDevice.Stop();
@@ -100,7 +101,7 @@ namespace AsistanceSystem
             {
                 ClassEmpleados classEmpleados = new ClassEmpleados();
                 ClassAsistencia classAsistencia = new ClassAsistencia();
-               var datos = _dataAccess.mostrarEmpleado();
+               var datos = _dataAccess.GetCodigoEmpleado();
                 foreach (var item in datos)
                 {
                     var id = item.CodigoEmpleado;
