@@ -65,10 +65,10 @@
             // 
             // txtGenerar
             // 
-            this.txtGenerar.Location = new System.Drawing.Point(156, 137);
+            this.txtGenerar.Location = new System.Drawing.Point(156, 158);
             this.txtGenerar.Multiline = true;
             this.txtGenerar.Name = "txtGenerar";
-            this.txtGenerar.Size = new System.Drawing.Size(150, 49);
+            this.txtGenerar.Size = new System.Drawing.Size(150, 23);
             this.txtGenerar.TabIndex = 12;
             // 
             // btnGenerar
@@ -93,9 +93,9 @@
             // 
             // imgQr
             // 
-            this.imgQr.Location = new System.Drawing.Point(337, 137);
+            this.imgQr.Location = new System.Drawing.Point(347, 158);
             this.imgQr.Name = "imgQr";
-            this.imgQr.Size = new System.Drawing.Size(145, 119);
+            this.imgQr.Size = new System.Drawing.Size(115, 98);
             this.imgQr.TabIndex = 13;
             this.imgQr.TabStop = false;
             // 

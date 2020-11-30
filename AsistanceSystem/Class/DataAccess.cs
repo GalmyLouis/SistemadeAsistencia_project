@@ -30,9 +30,12 @@ namespace AsistanceSystem.Class
                 cmd.Parameters.Add(Access);
                 SqlDataReader reader = cmd.ExecuteReader();
                 Desktop desktop = new Desktop();
+                
                 if (reader.Read())
                 {
                     MessageBox.Show("Login Existoso");
+
+                  
                     desktop.ShowDialog();
                 }
                 else
@@ -116,7 +119,7 @@ namespace AsistanceSystem.Class
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("----------Asistencia--------- ");
+                MessageBox.Show("----------Asistencia Guardada--------- ");
             }
             catch (Exception ex)
             {
@@ -138,7 +141,7 @@ namespace AsistanceSystem.Class
             try
             {
                 conn.Open();
-                string query = @"SELECT * from tblEmpleados";
+                string query = @"SpMostrarEmpleados";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                

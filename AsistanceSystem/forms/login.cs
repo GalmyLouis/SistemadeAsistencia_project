@@ -30,7 +30,7 @@ namespace AsistanceSystem.forms
             ClassLogin classLogin = new ClassLogin();
             classLogin.Usuario = txtUsers.Text;
             classLogin.contrasena = txtAccess.Text;
-
+            this.Close();
             _dataAccess.login(classLogin);
             
         }

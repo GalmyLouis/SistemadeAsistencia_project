@@ -102,26 +102,28 @@ namespace AsistanceSystem
                 ClassEmpleados classEmpleados = new ClassEmpleados();
                 ClassAsistencia classAsistencia = new ClassAsistencia();
                var datos = _dataAccess.GetCodigoEmpleado();
-                foreach (var item in datos)
-                {
-                    var id = item.CodigoEmpleado;
-                    if (id == txtCapture.Text)
-                    {
-                        DateTime hora = DateTime.Now;
-                        classAsistencia.CodigoEmpleado = txtCapture.Text;
-                        classAsistencia.HoraDeEntrada = hora;
-                        _EmpleadoFill.SaveAsistent(classAsistencia);
-                    }
-                }
                 
-                //if ("E-101" != classEmpleados.CodigoEmpleado)
-                //{
-                //    MessageBox.Show("no son iguales");
+                    foreach (var item in datos)
+                    {
+                        var id = item.CodigoEmpleado;
+                        if (id == txtCapture.Text)
+                        {
+                            DateTime hora = DateTime.Now;
+                            classAsistencia.CodigoEmpleado = txtCapture.Text;
+                            classAsistencia.HoraDeEntrada = hora;
+                            _EmpleadoFill.SaveAsistent(classAsistencia);
+                        }else if(id == txtCapture.Text)
+                        {
+                        MessageBox.Show("Usted no es Empleado de la empresa O sus datos aun no esta en nuestra base de datos");
 
-                //}
+                        }
+
+                    }
+
+                                   
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error", ex.ToString());
             }

@@ -58,10 +58,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label2.Location = new System.Drawing.Point(176, 112);
+            this.label2.Location = new System.Drawing.Point(168, 96);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 24);
+            this.label2.Size = new System.Drawing.Size(283, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Scanea Codigo de Empleado";
             // 
@@ -107,6 +108,7 @@
             // 
             // cbFilter
             // 
+            this.cbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilter.FormattingEnabled = true;
             this.cbFilter.Location = new System.Drawing.Point(471, 112);
             this.cbFilter.Name = "cbFilter";
@@ -120,6 +122,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::AsistanceSystem.Properties.Resources.lamp__1_;
             this.pictureBox2.Location = new System.Drawing.Point(12, 9);
             this.pictureBox2.Name = "pictureBox2";
@@ -155,7 +158,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(716, 368);
+            this.ClientSize = new System.Drawing.Size(730, 374);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.label3);
@@ -166,8 +169,11 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbScanner);
             this.Controls.Add(this.btnSignIn);
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximumSize = new System.Drawing.Size(1240, 950);
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Sistema de Asistencia";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

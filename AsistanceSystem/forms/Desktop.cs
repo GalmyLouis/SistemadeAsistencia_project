@@ -33,5 +33,17 @@ namespace AsistanceSystem.forms
             agregar saveEmp = new agregar();
             saveEmp.ShowDialog();
         }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Estas seguro de cerrar sesion", MessageBoxButtons.OK.ToString());
+            this.Close();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            ReportesAs rpt = new ReportesAs();
+            rpt.ShowDialog();
+        }
     }
 }

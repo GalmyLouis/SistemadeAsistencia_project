@@ -44,7 +44,7 @@
             // 
             // txtAccept
             // 
-            this.txtAccept.Location = new System.Drawing.Point(131, 197);
+            this.txtAccept.Location = new System.Drawing.Point(101, 197);
             this.txtAccept.Name = "txtAccept";
             this.txtAccept.Size = new System.Drawing.Size(79, 52);
             this.txtAccept.TabIndex = 0;
@@ -56,19 +56,20 @@
             // 
             this.txtUsers.Location = new System.Drawing.Point(134, 92);
             this.txtUsers.Name = "txtUsers";
-            this.txtUsers.Size = new System.Drawing.Size(203, 20);
+            this.txtUsers.Size = new System.Drawing.Size(188, 20);
             this.txtUsers.TabIndex = 1;
             // 
             // txtAccess
             // 
             this.txtAccess.Location = new System.Drawing.Point(131, 132);
             this.txtAccess.Name = "txtAccess";
-            this.txtAccess.Size = new System.Drawing.Size(204, 20);
+            this.txtAccess.PasswordChar = '*';
+            this.txtAccess.Size = new System.Drawing.Size(191, 20);
             this.txtAccess.TabIndex = 2;
             // 
             // txtCancel
             // 
-            this.txtCancel.Location = new System.Drawing.Point(262, 197);
+            this.txtCancel.Location = new System.Drawing.Point(249, 197);
             this.txtCancel.Name = "txtCancel";
             this.txtCancel.Size = new System.Drawing.Size(73, 52);
             this.txtCancel.TabIndex = 5;
@@ -83,7 +84,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(131, 9);
+            this.label1.Location = new System.Drawing.Point(101, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 24);
             this.label1.TabIndex = 6;
@@ -92,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 302);
+            this.label3.Location = new System.Drawing.Point(86, 348);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(256, 13);
             this.label3.TabIndex = 10;
@@ -100,8 +101,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::AsistanceSystem.Properties.Resources.lamp__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 9);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 33);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,9 +134,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(462, 324);
+            this.ClientSize = new System.Drawing.Size(414, 370);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
@@ -144,7 +147,10 @@
             this.Controls.Add(this.txtAccess);
             this.Controls.Add(this.txtUsers);
             this.Controls.Add(this.txtAccept);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "login";
+            this.ShowIcon = false;
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

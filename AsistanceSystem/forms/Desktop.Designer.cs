@@ -34,6 +34,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtnCerrarSesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,9 +69,11 @@
             this.btnReport.TabIndex = 10;
             this.btnReport.Text = "Generar reporte";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::AsistanceSystem.Properties.Resources.lamp__1_;
             this.pictureBox2.Location = new System.Drawing.Point(12, 9);
             this.pictureBox2.Name = "pictureBox2";
@@ -82,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(210, 294);
+            this.label3.Location = new System.Drawing.Point(206, 369);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(256, 13);
             this.label3.TabIndex = 13;
@@ -98,18 +101,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // BtnCerrarSesion
+            // 
+            this.BtnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(616, -1);
+            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(84, 23);
+            this.BtnCerrarSesion.TabIndex = 15;
+            this.BtnCerrarSesion.Text = "Cerrar Sesión";
+            this.BtnCerrarSesion.UseVisualStyleBackColor = false;
+            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(701, 348);
+            this.ClientSize = new System.Drawing.Size(702, 391);
+            this.Controls.Add(this.BtnCerrarSesion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnSaveEmp);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Desktop";
             this.Text = "Desktop";
             this.Load += new System.EventHandler(this.Desktop_Load);
@@ -127,5 +144,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnCerrarSesion;
     }
 }
