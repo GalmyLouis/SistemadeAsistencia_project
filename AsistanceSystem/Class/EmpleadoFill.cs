@@ -35,6 +35,14 @@ namespace AsistanceSystem.Class
             
         }
 
+        public List<ClassAsistencia> GetAsistencia()
+        {
+            return _dataAccess.mostrarAsistencia();
+
+
+
+        }
+
         public ClassAsistencia SaveAsistent(ClassAsistencia classAsistencia)
         {
              _dataAccess.GuardarAsistencia(classAsistencia);

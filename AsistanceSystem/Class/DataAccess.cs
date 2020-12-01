@@ -285,7 +285,42 @@ namespace AsistanceSystem.Class
             }
         }
 
-      
+        public List<ClassAsistencia> mostrarAsistencia()
+        {
+            List<ClassAsistencia> classAsistencia = new List<ClassAsistencia>();
+            try
+            {
+                conn.Open();
+                string query = @"Select * from tblAsistencia";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    classAsistencia.Add(new ClassAsistencia
+                    {
+
+                        id = int.Parse(reader["id"].ToString()),
+                        CodigoEmpleado = reader["CodigoEmpleado"].ToString(),
+                        HoraDeEntrada = Convert.ToDateTime( reader["HoraDeEntrada"].ToString()),
+                       
+                    });
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.ToString());
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return classAsistencia;
+        }
+
+
 
     }
 }

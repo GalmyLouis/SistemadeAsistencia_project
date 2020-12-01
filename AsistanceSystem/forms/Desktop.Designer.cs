@@ -35,7 +35,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
+            this.DgAsistencia = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +66,7 @@
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(408, 201);
+            this.btnReport.Location = new System.Drawing.Point(443, 90);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(75, 61);
             this.btnReport.TabIndex = 10;
@@ -93,9 +96,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(306, 131);
+            this.button1.Location = new System.Drawing.Point(318, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 56);
+            this.button1.Size = new System.Drawing.Size(76, 59);
             this.button1.TabIndex = 14;
             this.button1.Text = "Generar codigo QR\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -113,12 +116,33 @@
             this.BtnCerrarSesion.UseVisualStyleBackColor = false;
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
+            // DgAsistencia
+            // 
+            this.DgAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgAsistencia.Location = new System.Drawing.Point(169, 203);
+            this.DgAsistencia.Name = "DgAsistencia";
+            this.DgAsistencia.Size = new System.Drawing.Size(378, 163);
+            this.DgAsistencia.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(250, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Asistencias de los Empleados ";
+            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(702, 391);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DgAsistencia);
             this.Controls.Add(this.BtnCerrarSesion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -131,6 +155,7 @@
             this.Text = "Desktop";
             this.Load += new System.EventHandler(this.Desktop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgAsistencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +170,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnCerrarSesion;
+        private System.Windows.Forms.DataGridView DgAsistencia;
+        private System.Windows.Forms.Label label2;
     }
 }
