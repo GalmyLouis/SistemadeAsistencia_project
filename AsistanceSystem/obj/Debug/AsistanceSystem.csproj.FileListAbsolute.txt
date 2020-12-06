@@ -38,7 +38,6 @@ C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Softwar
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\zxing.presentation.xml
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.csprojAssemblyReference.cache
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.agregar.resources
-C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.Desktop.resources
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Form1.resources
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.login.resources
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.Properties.Resources.resources
@@ -73,3 +72,7 @@ C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Softwar
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\stdole.dll
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.ReportesAs.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\bin\Debug\FontAwesome.Sharp.Pro.dll
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.Principal.resources
+C:\Users\louis\Desktop\Backup\ITSC cursos y Proyectos\Clase de Prueba de Software\AsistanceSystem\AsistanceSystem\obj\Debug\AsistanceSystem.forms.DesktopForm.resources

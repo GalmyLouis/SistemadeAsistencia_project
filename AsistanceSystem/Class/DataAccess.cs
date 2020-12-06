@@ -29,14 +29,13 @@ namespace AsistanceSystem.Class
                 cmd.Parameters.Add(Usuario);
                 cmd.Parameters.Add(Access);
                 SqlDataReader reader = cmd.ExecuteReader();
-                Desktop desktop = new Desktop();
-                
+                Principal principal = new Principal();
                 if (reader.Read())
                 {
                     MessageBox.Show("Login Existoso");
 
+                    principal.ShowDialog();
                   
-                    desktop.ShowDialog();
                 }
                 else
                 {
@@ -54,6 +53,7 @@ namespace AsistanceSystem.Class
                 conn.Close();
             }
         }
+       
         public void InsertarEmpleados(ClassEmpleados classEmpleados)
         {
             try
@@ -101,7 +101,7 @@ namespace AsistanceSystem.Class
           
             
         }
-
+       
         public void GuardarAsistencia(ClassAsistencia classAsistencia)
         {
 
@@ -180,7 +180,7 @@ namespace AsistanceSystem.Class
             try
             {
                 conn.Open();
-                string query = @"SELECT CodigoEmpleado From tblEmpleados";
+                string query = @"SpgetCodigoEmpleados ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 

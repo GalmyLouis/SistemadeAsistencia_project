@@ -28,54 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtAccept = new System.Windows.Forms.Button();
             this.txtUsers = new System.Windows.Forms.TextBox();
             this.txtAccess = new System.Windows.Forms.TextBox();
-            this.txtCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconbtnAccept = new FontAwesome.Sharp.IconButton();
+            this.iconBtnCancel = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtAccept
-            // 
-            this.txtAccept.Location = new System.Drawing.Point(101, 197);
-            this.txtAccept.Name = "txtAccept";
-            this.txtAccept.Size = new System.Drawing.Size(79, 52);
-            this.txtAccept.TabIndex = 0;
-            this.txtAccept.Text = "Acceptar";
-            this.txtAccept.UseVisualStyleBackColor = true;
-            this.txtAccept.Click += new System.EventHandler(this.txtAccept_Click);
             // 
             // txtUsers
             // 
-            this.txtUsers.Location = new System.Drawing.Point(134, 92);
+            this.txtUsers.Location = new System.Drawing.Point(134, 101);
+            this.txtUsers.Multiline = true;
             this.txtUsers.Name = "txtUsers";
-            this.txtUsers.Size = new System.Drawing.Size(188, 20);
+            this.txtUsers.Size = new System.Drawing.Size(188, 23);
             this.txtUsers.TabIndex = 1;
             // 
             // txtAccess
             // 
-            this.txtAccess.Location = new System.Drawing.Point(131, 132);
+            this.txtAccess.Location = new System.Drawing.Point(131, 140);
+            this.txtAccess.Multiline = true;
             this.txtAccess.Name = "txtAccess";
             this.txtAccess.PasswordChar = '*';
-            this.txtAccess.Size = new System.Drawing.Size(191, 20);
+            this.txtAccess.Size = new System.Drawing.Size(191, 22);
             this.txtAccess.TabIndex = 2;
-            // 
-            // txtCancel
-            // 
-            this.txtCancel.Location = new System.Drawing.Point(249, 197);
-            this.txtCancel.Name = "txtCancel";
-            this.txtCancel.Size = new System.Drawing.Size(73, 52);
-            this.txtCancel.TabIndex = 5;
-            this.txtCancel.Text = "Cancelar";
-            this.txtCancel.UseVisualStyleBackColor = true;
-            this.txtCancel.Click += new System.EventHandler(this.txtCancel_Click);
             // 
             // label1
             // 
@@ -93,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 348);
+            this.label3.Location = new System.Drawing.Point(66, 376);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(256, 13);
             this.label3.TabIndex = 10;
@@ -110,25 +92,59 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
+            // iconbtnAccept
             // 
-            this.pictureBox2.Image = global::AsistanceSystem.Properties.Resources.padlock;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 132);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.iconbtnAccept.IconChar = FontAwesome.Sharp.IconChar.LifeRing;
+            this.iconbtnAccept.IconColor = System.Drawing.Color.DarkRed;
+            this.iconbtnAccept.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconbtnAccept.Location = new System.Drawing.Point(87, 234);
+            this.iconbtnAccept.Name = "iconbtnAccept";
+            this.iconbtnAccept.Size = new System.Drawing.Size(75, 57);
+            this.iconbtnAccept.TabIndex = 11;
+            this.iconbtnAccept.Text = "Acceptar";
+            this.iconbtnAccept.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconbtnAccept.UseVisualStyleBackColor = true;
+            this.iconbtnAccept.Click += new System.EventHandler(this.iconbtnAccept_Click);
             // 
-            // pictureBox1
+            // iconBtnCancel
             // 
-            this.pictureBox1.Image = global::AsistanceSystem.Properties.Resources.profile_user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 92);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.iconBtnCancel.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
+            this.iconBtnCancel.IconColor = System.Drawing.Color.Black;
+            this.iconBtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconBtnCancel.Location = new System.Drawing.Point(230, 234);
+            this.iconBtnCancel.Name = "iconBtnCancel";
+            this.iconBtnCancel.Size = new System.Drawing.Size(75, 57);
+            this.iconBtnCancel.TabIndex = 12;
+            this.iconBtnCancel.Text = "Cancelar";
+            this.iconBtnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconBtnCancel.UseVisualStyleBackColor = true;
+            this.iconBtnCancel.Click += new System.EventHandler(this.iconBtnCancel_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.DarkRed;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.DarkRed;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(87, 92);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(41, 32);
+            this.iconPictureBox1.TabIndex = 13;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.DarkRed;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.DarkRed;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.Location = new System.Drawing.Point(87, 130);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(41, 32);
+            this.iconPictureBox2.TabIndex = 14;
+            this.iconPictureBox2.TabStop = false;
             // 
             // login
             // 
@@ -136,41 +152,40 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(414, 370);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(393, 422);
+            this.Controls.Add(this.iconPictureBox2);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.iconBtnCancel);
+            this.Controls.Add(this.iconbtnAccept);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCancel);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtAccess);
             this.Controls.Add(this.txtUsers);
-            this.Controls.Add(this.txtAccept);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "login";
             this.ShowIcon = false;
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button txtAccept;
         private System.Windows.Forms.TextBox txtUsers;
         private System.Windows.Forms.TextBox txtAccess;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button txtCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton iconbtnAccept;
+        private FontAwesome.Sharp.IconButton iconBtnCancel;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }

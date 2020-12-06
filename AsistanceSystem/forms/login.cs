@@ -22,27 +22,23 @@ namespace AsistanceSystem.forms
             _dataAccess = new DataAccess();
         }
 
-
-        
-        private void txtAccept_Click(object sender, EventArgs e)
+        private void iconbtnAccept_Click(object sender, EventArgs e)
         {
-            
             ClassLogin classLogin = new ClassLogin();
             classLogin.Usuario = txtUsers.Text;
             classLogin.contrasena = txtAccess.Text;
             this.Close();
             _dataAccess.login(classLogin);
-            
+        }
+
+        private void iconBtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void login_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

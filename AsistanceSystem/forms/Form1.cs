@@ -131,15 +131,21 @@ namespace AsistanceSystem
 
         }
 
-        private void btnSignIn_Click(object sender, EventArgs e)
-        {
-            login formLogin= new login();
-            formLogin.Show();
-        }
-
+      
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconBtnSignIn_Click(object sender, EventArgs e)
+        {
+            login formLogin = new login();
+            formLogin.Show();
         }
     }
 }

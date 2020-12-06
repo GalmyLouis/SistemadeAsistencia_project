@@ -28,13 +28,12 @@ namespace AsistanceSystem.forms
             CargarEmpleado();
         }
 
-        
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void iconBtnNuevoE_Click(object sender, EventArgs e)
         {
             OpenNuevoEmpleado();
-                 
         }
+
+       
 
         private void OpenNuevoEmpleado()
         {
@@ -53,11 +52,11 @@ namespace AsistanceSystem.forms
             List<ClassEmpleados> classEmpleados = _EmpleadoFill.GetEmpleados();
             dgEmpleado.DataSource = classEmpleados;    
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void iconCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+       
 
         private void dgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
